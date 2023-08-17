@@ -4,6 +4,6 @@
     "run_prettier": true,
     "meta_dir": ".mightymeld",
     "prefab_dir": "src/prefabs",
-    "web_server_url": "http://localhost:5173",
+    "web_server_url": "http://localhost:5000",
     "main_branch": "main"
   }

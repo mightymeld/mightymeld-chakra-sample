@@ -40,20 +40,20 @@ import {
   WrapItem,
   AccordionButton,
   AccordionItem,
-  AccordionPanel
-} from '@chakra-ui/react'
+  AccordionPanel,
+} from "@chakra-ui/react";
 
 export function _Box() {
   return (
     <Box bg="tomato" w="100%" p={4} color="white">
       This is the Box
     </Box>
-  )
+  );
 }
 
 export function _Stack() {
   return (
-    <Stack direction={['column', 'row']} spacing="24px">
+    <Stack direction={["column", "row"]} spacing="24px">
       <Box w="40px" h="40px" bg="yellow.200">
         1
       </Box>
@@ -64,7 +64,7 @@ export function _Stack() {
         3
       </Box>
     </Stack>
-  )
+  );
 }
 
 export function _HStack() {
@@ -80,7 +80,7 @@ export function _HStack() {
         3
       </Box>
     </HStack>
-  )
+  );
 }
 
 export function _VStack() {
@@ -96,7 +96,7 @@ export function _VStack() {
         3
       </Box>
     </VStack>
-  )
+  );
 }
 
 export function _Flex() {
@@ -112,7 +112,7 @@ export function _Flex() {
         <Text>Box 3</Text>
       </Box>
     </Flex>
-  )
+  );
 }
 
 export function _Center() {
@@ -120,55 +120,61 @@ export function _Center() {
     <Center bg="tomato" h="100px" color="white">
       This is the Center
     </Center>
-  )
+  );
 }
 
 export function _Text() {
-  return <Text>Text</Text>
+  return <Text>Text</Text>;
 }
 
 export function _Heading() {
-  return <Heading>Heading</Heading>
+  return <Heading>Heading</Heading>;
 }
 
 export function _Button() {
-  return <Button variant="primary">Button</Button>
+  return <Button variant="primary">Button</Button>;
 }
 
 export function _Image() {
-  return <Image src="https://picsum.photos/300/200" alt="Sample Image" />
+  return <Image src="https://picsum.photos/300/200" alt="Sample Image" />;
 }
 
 export function _Divider() {
-  return <Divider orientation="horizontal" />
+  return <Divider orientation="horizontal" />;
 }
 
 export function _Spacer() {
-  return <Spacer />
+  return <Spacer />;
 }
 
 export function _Container() {
   return (
     <Container maxW="2xl" bg="blue.600" centerContent>
       <Box padding="4" bg="blue.400" color="black" maxW="md">
-        There are many benefits to a joint design and development system. Not only does it bring
-        benefits to the design team, but it also brings benefits to engineering teams. It makes sure
-        that our experiences have a consistent look and feel, not just in our design specs, but in
+        There are many benefits to a joint design and development system. Not
+        only does it bring benefits to the design team, but it also brings
+        benefits to engineering teams. It makes sure that our experiences have a
+        consistent look and feel, not just in our design specs, but in
         production.
       </Box>
     </Container>
-  )
+  );
 }
 
 export function _Grid() {
   return (
-    <Grid h="200px" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={4}>
+    <Grid
+      h="200px"
+      templateRows="repeat(2, 1fr)"
+      templateColumns="repeat(5, 1fr)"
+      gap={4}
+    >
       <GridItem rowSpan={2} colSpan={1} bg="tomato" />
       <GridItem colSpan={2} bg="papayawhip" />
       <GridItem colSpan={2} bg="papayawhip" />
       <GridItem colSpan={4} bg="tomato" />
     </Grid>
-  )
+  );
 }
 
 export function _SimpleGrid() {
@@ -183,7 +189,7 @@ export function _SimpleGrid() {
       <Box bg="tomato" height="80px"></Box>
       <Box bg="tomato" height="80px"></Box>
     </SimpleGrid>
-  )
+  );
 }
 
 export function _AspectRatio() {
@@ -191,7 +197,7 @@ export function _AspectRatio() {
     <AspectRatio maxW="400px" ratio={4 / 3}>
       <Image src="https://bit.ly/naruto-sage" alt="naruto" objectFit="cover" />
     </AspectRatio>
-  )
+  );
 }
 
 export function _Wrap() {
@@ -218,11 +224,11 @@ export function _Wrap() {
         </Center>
       </WrapItem>
     </Wrap>
-  )
+  );
 }
 
 export function _Input() {
-  return <Input placeholder="Basic usage" />
+  return <Input placeholder="Basic usage" />;
 }
 
 export function _NumberInput() {
@@ -234,7 +240,7 @@ export function _NumberInput() {
         <NumberDecrementStepper />
       </NumberInputStepper>
     </NumberInput>
-  )
+  );
 }
 
 export function _RadioGroup() {
@@ -248,7 +254,7 @@ export function _RadioGroup() {
         <Radio value="3">Unchecked</Radio>
       </Stack>
     </RadioGroup>
-  )
+  );
 }
 
 export function _Select() {
@@ -258,11 +264,11 @@ export function _Select() {
       <option value="option2">Option 2</option>
       <option value="option3">Option 3</option>
     </Select>
-  )
+  );
 }
 
 export function _Textarea() {
-  return <Textarea placeholder="Here is a sample placeholder" />
+  return <Textarea placeholder="Here is a sample placeholder" />;
 }
 
 export function _Tabs() {
@@ -286,7 +292,7 @@ export function _Tabs() {
         </TabPanel>
       </TabPanels>
     </Tabs>
-  )
+  );
 }
 
 export function _Accordion() {
@@ -302,9 +308,10 @@ export function _Accordion() {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </AccordionPanel>
       </AccordionItem>
 
@@ -318,13 +325,14 @@ export function _Accordion() {
           </AccordionButton>
         </h2>
         <AccordionPanel pb={4}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }
 
 export function _Link() {
@@ -332,13 +340,16 @@ export function _Link() {
     <Link href="https://chakra-ui.com" isExternal>
       Chakra Design system
     </Link>
-  )
+  );
 }
 
 export function _Icon() {
   return (
     <Icon viewBox="0 0 200 200" color="red.500">
-      <path fill="currentColor" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
+      <path
+        fill="currentColor"
+        d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"
+      />
     </Icon>
-  )
+  );
 }

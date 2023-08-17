@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../../layout'
 
 const Error = () => {
   return (
-    <div>Error</div>
+<Layout>
+      <div>Error</div>
+    </Layout>
   )
 }
 
