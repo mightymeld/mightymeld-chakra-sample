@@ -1,5 +1,3 @@
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { SetStateAction, useContext, useState } from "react";
 import {
   Box,
@@ -7,7 +5,6 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  useBreakpointValue
 } from "@chakra-ui/react";
 import searchIcon from "../../assets/icons/icon-search.svg";
 import Layout from "../../layout";

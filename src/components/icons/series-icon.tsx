@@ -1,5 +1,3 @@
-import React from 'react'
-
 const TvSeriesIcon = ({fill}: Record<string, string>) => {
     return (
         <>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MovieIcon = ({fill}: Record<string, string>) => {
     return (
         <>

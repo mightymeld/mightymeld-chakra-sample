@@ -1,13 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { SetStateAction, useContext, useState } from "react";
-import {
-  Box,
-  Heading,
-  Input,
-  InputGroup,
-  InputLeftElement,
-  useBreakpointValue
-} from "@chakra-ui/react";
+import { Box, Heading, Input, InputGroup, InputLeftElement} from "@chakra-ui/react";
 import searchIcon from "../../assets/icons/icon-search.svg";
 import Layout from "../../layout";
 import { MovieContext } from "../../context/movies-context";

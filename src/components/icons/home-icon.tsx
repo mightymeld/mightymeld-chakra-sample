@@ -1,5 +1,3 @@
-import React from 'react'
-
 const HomeIcon = ({fill, width='100', height='100'}: Record<string, string>) => {
     return (
         <>
