@@ -23,7 +23,7 @@ const MovieTrendCard = ({ movie }: MoviecardProps) => {
     };
 
     return (
-        <Card key={movie.id} padding={0} bg="transparent" color={'white'}  >
+        <Card key={movie.id} padding={0} bg="transparent"  >
             <CardBody padding={0} position="relative" >
                 <Image
                     src={movie.thumbnail.regular.large} alt='Green double couch with wooden legs'

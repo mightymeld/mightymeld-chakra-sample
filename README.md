@@ -1,27 +1,21 @@
-# React + TypeScript + Vite
+## About
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application from Frontend Mentor Entertainment App Challenge was setup and built with MightyMeld.
 
-Currently, two official plugins are available:
+## Editing the app with MightyMeld
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Run `yarn` to install depenendencies
 
-## Expanding the ESLint configuration
+2. Copy `.env.template` to `.env` and add your MightyMeld instance ID. If you don’t have an instance ID, [sign up for MightyMeld](https://www.mightymeld.com) or join the waitlist and you will receive one.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. Launch the app using `npx mightymeld`.
 
-- Configure the top-level `parserOptions` property like this:
+4. Once the app has loaded, visit [studio.mightymeld.app](https://studio.mightymeld.app/) to begin editing your app.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Troubleshooting
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Running the app without MightyMeld
+
+1. Type `yarn` to install dependencies.
+
+2. Run `yarn start`, the app should then appear in a browser tab on [localhost:3000](localhost:3000)
