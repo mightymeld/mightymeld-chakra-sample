@@ -1,9 +1,11 @@
 {
-    "run": "npm run dev",
-    "include": ["src"],
-    "run_prettier": true,
-    "meta_dir": ".mightymeld",
-    "prefab_dir": "src/prefabs",
-    "web_server_url": "http://localhost:5000",
-    "main_branch": "main"
-  }
+  "run": "npm run dev",
+  "include": [
+    "src"
+  ],
+  "prefab_dir": "src/prefabs",
+  "web_server_url": "http://localhost:5000",
+  "main_branch": "main",
+  "tailwind": true,
+  "run_prettier": true
+}
