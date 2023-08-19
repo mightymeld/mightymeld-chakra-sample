@@ -6,21 +6,21 @@ import Home from "./pages/home";
 import Error from "./pages/error";
 
 export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Home />,
-        errorElement: <Error />,
-    },
-    {
-        path: "/movies",
-        element: <Movies />,
-    },
-    {
-        path: "/tv-series",
-        element: <TvSeries />,
-    },
-    {
-        path: "/bookmarks",
-        element: <Bookmarks />,
-    },
-])
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <Error />,
+  },
+  {
+    path: "/movies",
+    element: <Movies />,
+  },
+  {
+    path: "/tv-series",
+    element: <TvSeries />,
+  },
+  {
+    path: "/bookmarks",
+    element: <Bookmarks />,
+  },
+]);
