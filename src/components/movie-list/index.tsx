@@ -21,6 +21,4 @@ const MovieList = ({ recommendList }: MovieListProps) => {
   );
 };
 
-
-
 export default MovieList;

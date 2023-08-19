@@ -57,183 +57,183 @@ import {
   ViewIcon,
   ViewOffIcon,
   WarningIcon,
-  WarningTwoIcon
-} from '@chakra-ui/icons'
+  WarningTwoIcon,
+} from "@chakra-ui/icons";
 
 export function _AddIcon() {
-  return <AddIcon boxSize={6} />
+  return <AddIcon boxSize={6} />;
 }
 export function _ArrowBackIcon() {
-  return <ArrowBackIcon boxSize={6} />
+  return <ArrowBackIcon boxSize={6} />;
 }
 export function _ArrowDownIcon() {
-  return <ArrowDownIcon boxSize={6} />
+  return <ArrowDownIcon boxSize={6} />;
 }
 export function _ArrowForwardIcon() {
-  return <ArrowForwardIcon boxSize={6} />
+  return <ArrowForwardIcon boxSize={6} />;
 }
 export function _ArrowLeftIcon() {
-  return <ArrowLeftIcon boxSize={6} />
+  return <ArrowLeftIcon boxSize={6} />;
 }
 export function _ArrowRightIcon() {
-  return <ArrowRightIcon boxSize={6} />
+  return <ArrowRightIcon boxSize={6} />;
 }
 export function _ArrowUpDownIcon() {
-  return <ArrowUpDownIcon boxSize={6} />
+  return <ArrowUpDownIcon boxSize={6} />;
 }
 export function _ArrowUpIcon() {
-  return <ArrowUpIcon boxSize={6} />
+  return <ArrowUpIcon boxSize={6} />;
 }
 export function _AtSignIcon() {
-  return <AtSignIcon boxSize={6} />
+  return <AtSignIcon boxSize={6} />;
 }
 export function _AttachmentIcon() {
-  return <AttachmentIcon boxSize={6} />
+  return <AttachmentIcon boxSize={6} />;
 }
 export function _BellIcon() {
-  return <BellIcon boxSize={6} />
+  return <BellIcon boxSize={6} />;
 }
 export function _CalendarIcon() {
-  return <CalendarIcon boxSize={6} />
+  return <CalendarIcon boxSize={6} />;
 }
 export function _ChatIcon() {
-  return <ChatIcon boxSize={6} />
+  return <ChatIcon boxSize={6} />;
 }
 export function _CheckCircleIcon() {
-  return <CheckCircleIcon boxSize={6} />
+  return <CheckCircleIcon boxSize={6} />;
 }
 export function _CheckIcon() {
-  return <CheckIcon boxSize={6} />
+  return <CheckIcon boxSize={6} />;
 }
 export function _ChevronDownIcon() {
-  return <ChevronDownIcon boxSize={6} />
+  return <ChevronDownIcon boxSize={6} />;
 }
 export function _ChevronLeftIcon() {
-  return <ChevronLeftIcon boxSize={6} />
+  return <ChevronLeftIcon boxSize={6} />;
 }
 export function _ChevronRightIcon() {
-  return <ChevronRightIcon boxSize={6} />
+  return <ChevronRightIcon boxSize={6} />;
 }
 export function _ChevronUpIcon() {
-  return <ChevronUpIcon boxSize={6} />
+  return <ChevronUpIcon boxSize={6} />;
 }
 export function _CloseIcon() {
-  return <CloseIcon boxSize={6} />
+  return <CloseIcon boxSize={6} />;
 }
 export function _CopyIcon() {
-  return <CopyIcon boxSize={6} />
+  return <CopyIcon boxSize={6} />;
 }
 export function _DeleteIcon() {
-  return <DeleteIcon boxSize={6} />
+  return <DeleteIcon boxSize={6} />;
 }
 export function _DownloadIcon() {
-  return <DownloadIcon boxSize={6} />
+  return <DownloadIcon boxSize={6} />;
 }
 export function _DragHandleIcon() {
-  return <DragHandleIcon boxSize={6} />
+  return <DragHandleIcon boxSize={6} />;
 }
 export function _EditIcon() {
-  return <EditIcon boxSize={6} />
+  return <EditIcon boxSize={6} />;
 }
 export function _EmailIcon() {
-  return <EmailIcon boxSize={6} />
+  return <EmailIcon boxSize={6} />;
 }
 export function _ExternalLinkIcon() {
-  return <ExternalLinkIcon boxSize={6} />
+  return <ExternalLinkIcon boxSize={6} />;
 }
 export function _HamburgerIcon() {
-  return <HamburgerIcon boxSize={6} />
+  return <HamburgerIcon boxSize={6} />;
 }
 export function _InfoIcon() {
-  return <InfoIcon boxSize={6} />
+  return <InfoIcon boxSize={6} />;
 }
 export function _InfoOutlineIcon() {
-  return <InfoOutlineIcon boxSize={6} />
+  return <InfoOutlineIcon boxSize={6} />;
 }
 export function _LinkIcon() {
-  return <LinkIcon boxSize={6} />
+  return <LinkIcon boxSize={6} />;
 }
 export function _LockIcon() {
-  return <LockIcon boxSize={6} />
+  return <LockIcon boxSize={6} />;
 }
 export function _MinusIcon() {
-  return <MinusIcon boxSize={6} />
+  return <MinusIcon boxSize={6} />;
 }
 export function _MoonIcon() {
-  return <MoonIcon boxSize={6} />
+  return <MoonIcon boxSize={6} />;
 }
 export function _NotAllowedIcon() {
-  return <NotAllowedIcon boxSize={6} />
+  return <NotAllowedIcon boxSize={6} />;
 }
 export function _PhoneIcon() {
-  return <PhoneIcon boxSize={6} />
+  return <PhoneIcon boxSize={6} />;
 }
 export function _PlusSquareIcon() {
-  return <PlusSquareIcon boxSize={6} />
+  return <PlusSquareIcon boxSize={6} />;
 }
 export function _QuestionIcon() {
-  return <QuestionIcon boxSize={6} />
+  return <QuestionIcon boxSize={6} />;
 }
 export function _QuestionOutlineIcon() {
-  return <QuestionOutlineIcon boxSize={6} />
+  return <QuestionOutlineIcon boxSize={6} />;
 }
 export function _ReactIcon() {
-  return <ReactIcon boxSize={6} />
+  return <ReactIcon boxSize={6} />;
 }
 export function _RepeatClockIcon() {
-  return <RepeatClockIcon boxSize={6} />
+  return <RepeatClockIcon boxSize={6} />;
 }
 export function _RepeatIcon() {
-  return <RepeatIcon boxSize={6} />
+  return <RepeatIcon boxSize={6} />;
 }
 export function _Search2Icon() {
-  return <Search2Icon boxSize={6} />
+  return <Search2Icon boxSize={6} />;
 }
 export function _SearchIcon() {
-  return <SearchIcon boxSize={6} />
+  return <SearchIcon boxSize={6} />;
 }
 export function _SettingsIcon() {
-  return <SettingsIcon boxSize={6} />
+  return <SettingsIcon boxSize={6} />;
 }
 export function _SmallAddIcon() {
-  return <SmallAddIcon boxSize={6} />
+  return <SmallAddIcon boxSize={6} />;
 }
 export function _SmallCloseIcon() {
-  return <SmallCloseIcon boxSize={6} />
+  return <SmallCloseIcon boxSize={6} />;
 }
 export function _SpinnerIcon() {
-  return <SpinnerIcon boxSize={6} />
+  return <SpinnerIcon boxSize={6} />;
 }
 export function _StarIcon() {
-  return <StarIcon boxSize={6} />
+  return <StarIcon boxSize={6} />;
 }
 export function _SunIcon() {
-  return <SunIcon boxSize={6} />
+  return <SunIcon boxSize={6} />;
 }
 export function _TimeIcon() {
-  return <TimeIcon boxSize={6} />
+  return <TimeIcon boxSize={6} />;
 }
 export function _TriangleDownIcon() {
-  return <TriangleDownIcon boxSize={6} />
+  return <TriangleDownIcon boxSize={6} />;
 }
 export function _TriangleUpIcon() {
-  return <TriangleUpIcon boxSize={6} />
+  return <TriangleUpIcon boxSize={6} />;
 }
 export function _UnlockIcon() {
-  return <UnlockIcon boxSize={6} />
+  return <UnlockIcon boxSize={6} />;
 }
 export function _UpDownIcon() {
-  return <UpDownIcon boxSize={6} />
+  return <UpDownIcon boxSize={6} />;
 }
 export function _ViewIcon() {
-  return <ViewIcon boxSize={6} />
+  return <ViewIcon boxSize={6} />;
 }
 export function _ViewOffIcon() {
-  return <ViewOffIcon boxSize={6} />
+  return <ViewOffIcon boxSize={6} />;
 }
 export function _WarningIcon() {
-  return <WarningIcon boxSize={6} />
+  return <WarningIcon boxSize={6} />;
 }
 export function _WarningTwoIcon() {
-  return <WarningTwoIcon boxSize={6} />
+  return <WarningTwoIcon boxSize={6} />;
 }

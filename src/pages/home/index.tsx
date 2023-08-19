@@ -22,11 +22,13 @@ const Home = () => {
   const trendingList = Movies.filter((item) => item.isTrending === true);
   const recommendList = Movies.filter((item) => item.isTrending !== true);
 
-  const handleSearch = (e: { target: { value: SetStateAction<string>; }; }) => {
-    setSearch(e.target.value)
-    const newList = Movies.filter(movie => movie.title.toLowerCase().includes(search))
-    setSearchList(newList );    
-  }
+  const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
+    setSearch(e.target.value);
+    const newList = Movies.filter((movie) =>
+      movie.title.toLowerCase().includes(search),
+    );
+    setSearchList(newList);
+  };
 
   return (
     <Layout>
@@ -80,7 +82,9 @@ const Home = () => {
             </Box>
           ) : (
             <Box w="100%">
-              <Heading>Found {searchList.length} results for "{search}" </Heading>
+              <Heading>
+                Found {searchList.length} results for "{search}"{" "}
+              </Heading>
               <MovieList recommendList={searchList} />
             </Box>
           )}

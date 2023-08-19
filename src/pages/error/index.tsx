@@ -1,11 +1,11 @@
-import Layout from '../../layout'
+import Layout from "../../layout";
 
 const Error = () => {
   return (
-<Layout>
+    <Layout>
       <div>Error</div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Error
+export default Error;

@@ -1,6 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { SetStateAction, useContext, useState } from "react";
-import { Box, Heading, Input, InputGroup, InputLeftElement} from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Input,
+  InputGroup,
+  InputLeftElement,
+} from "@chakra-ui/react";
 import searchIcon from "../../assets/icons/icon-search.svg";
 import Layout from "../../layout";
 import { MovieContext } from "../../context/movies-context";
@@ -8,17 +14,19 @@ import { MovieDataType } from "../../assets/data";
 import MovieList from "../../components/movie-list";
 
 const TvSeries = () => {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState("");
   const [searchList, setSearchList] = useState<MovieDataType[]>([]);
   const { state } = useContext(MovieContext);
-  const { Movies } = state
-  const tvSeries = Movies.filter(item => item.category === 'TV Series')
+  const { Movies } = state;
+  const tvSeries = Movies.filter((item) => item.category === "TV Series");
 
-  const handleSearch = (e: { target: { value: SetStateAction<string>; }; }) => {
-    setSearch(e.target.value)
-    const newList = Movies.filter(movie => movie.title.toLowerCase().includes(search))
+  const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
+    setSearch(e.target.value);
+    const newList = Movies.filter((movie) =>
+      movie.title.toLowerCase().includes(search),
+    );
     setSearchList(newList);
-  }
+  };
 
   return (
     <Layout>
@@ -28,8 +36,17 @@ const TvSeries = () => {
             <InputLeftElement pointerEvents="none">
               <img src={searchIcon} alt="search icon" className="w-5 h-5" />
             </InputLeftElement>
-            <Input type="search" placeholder="Search for movies or TV series" size="md" _placeholder={{ opacity: 0.5 }}
-              border={"none"} outline={"none"} focusBorderColor="none" htmlSize={6} value={search} onChange={handleSearch}
+            <Input
+              type="search"
+              placeholder="Search for movies or TV series"
+              size="md"
+              _placeholder={{ opacity: 0.5 }}
+              border={"none"}
+              outline={"none"}
+              focusBorderColor="none"
+              htmlSize={6}
+              value={search}
+              onChange={handleSearch}
             />
           </InputGroup>
         </header>
@@ -43,7 +60,9 @@ const TvSeries = () => {
             </Box>
           ) : (
             <Box w="100%">
-              <Heading>Found {searchList.length} results for "{search}" </Heading>
+              <Heading>
+                Found {searchList.length} results for "{search}"{" "}
+              </Heading>
               <MovieList recommendList={searchList} />
             </Box>
           )}
