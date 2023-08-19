@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Image } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import avatarImage from "../../assets/image-avatar.png";
 import homeIcon from "../../assets/icons/icon-nav-home.svg";
 import movieIcon from "../../assets/icons/icon-nav-movies.svg";
@@ -33,17 +33,48 @@ const Sidebar = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav className="flex  lg:flex-col items-center justify-between h-full p-3 rounded-lg bg-[#161d2f]">
-      <div className="flex gap-9  lg:flex-col items-center justify-center">
+    <Box
+      bg={"#161d2f"}
+      p={3}
+      borderRadius={"lg"}
+      height="100%"
+      display={"flex"}
+      flexDirection={{
+        base: "row",
+        lg: "column",
+      }}
+      alignItems="center"
+      justifyContent="space-between"
+    >
+      <Box
+        display="flex"
+        flexDirection={{
+          base: "row",
+          lg: "column",
+        }}
+        gap={10}
+        justifyContent="center"
+        alignItems="center"
+      >
         <Image src="/logo.svg" alt="logo" />
-        <ul className="flex flex-row lg:flex-col gap-10 lg:py-16">
+        <Box
+          py={{
+            base: "0px",
+            lg: "16px",
+          }}
+          display="flex"
+          flexDirection={{
+            base: "row",
+            lg: "column",
+          }}
+          gap={10}
+        >
           {navLinks.map((item) => (
-            <li key={item.name} className="">
-              <Link to={item.link}>
-                <div className=" w-5 h-5">
-                  <img
+              <Link key={item.name} to={item.link}>
+                <Box width={5} height={5}>
+                  <Image
                     src={item.icon}
-                    alt=""
+                    alt={item.name}
                     style={{
                       filter: `${
                         pathname === item.link
@@ -52,16 +83,13 @@ const Sidebar = () => {
                       }`,
                     }}
                   />
-                </div>
+                </Box>
               </Link>
-            </li>
           ))}
-        </ul>
-      </div>
-      <div className="rounded-full border-3 border-white overflow-hidden">
-        <img src={avatarImage} alt="avatar" className="rounded-full" />
-      </div>
-    </nav>
+        </Box>
+      </Box>
+      <Image src={avatarImage} alt="avatar" borderRadius={"full"} />
+    </Box>
   );
 };
 

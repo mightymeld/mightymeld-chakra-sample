@@ -1,6 +1,7 @@
 import { SetStateAction, useContext, useState } from "react";
 import {
   Box,
+  Image,
   Heading,
   Input,
   InputGroup,
@@ -29,11 +30,10 @@ const Bookmarks = () => {
 
   return (
     <Layout>
-      <div className="">
-        <header className="w-full">
-          <InputGroup className="flex items-center">
+        <Box>
+          <InputGroup display={"flex"} justifyContent={"center"}>
             <InputLeftElement pointerEvents="none">
-              <img src={searchIcon} alt="search icon" className="w-5 h-5" />
+              <Image src={searchIcon} alt="search icon" width={5} height={5} />
             </InputLeftElement>
             <Input
               type="search"
@@ -48,8 +48,8 @@ const Bookmarks = () => {
               onChange={handleSearch}
             />
           </InputGroup>
-        </header>
-        <main className="py-6 px-4">
+        </Box>
+        <Box py={6} px={4}>
           {search === "" ? (
             <Box w="100%">
               <Heading as="h1" size="md" my={6} fontWeight={400} noOfLines={1}>
@@ -65,8 +65,7 @@ const Bookmarks = () => {
               <MovieList recommendList={searchList} />
             </Box>
           )}
-        </main>
-      </div>
+        </Box>
     </Layout>
   );
 };
