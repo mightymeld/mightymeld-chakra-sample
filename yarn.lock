@@ -418,6 +418,13 @@
   dependencies:
     "@chakra-ui/shared-utils" "2.0.5"
 
+"@chakra-ui/icons@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-2.1.0.tgz#52677939e02f9d6b902bd2c2931e5f18d3c8b523"
+  integrity sha512-pGFxFfQ/P5VnSRnTzK8zGAJxoxkxpHo/Br9ohRZdOpuhnIHSW7va0P53UoycEO5/vNJ/7BN0oDY0k9qurChcew==
+  dependencies:
+    "@chakra-ui/icon" "3.1.0"
+
 "@chakra-ui/image@2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-2.1.0.tgz#6c205f1ca148e3bf58345b0b5d4eb3d959eb9f87"
@@ -1338,10 +1345,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mightymeld/runtime@^0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@mightymeld/runtime/-/runtime-0.1.22.tgz#bce7390b6b0aca2eccc74e2fae4c4ceed39d5318"
-  integrity sha512-Ptu+W9HEGMZ0WxIk/KExs6SCJ+yLTDYeGZ8HNwHUCEGou+rbhM7RTv57DOqDkQqy2RRbHjBVcoWw9gxZW8yaTQ==
+"@mightymeld/runtime@^0.1.23":
+  version "0.1.23"
+  resolved "https://registry.yarnpkg.com/@mightymeld/runtime/-/runtime-0.1.23.tgz#8fc969cc66cde75de44ed8c36b70a48f510de2e2"
+  integrity sha512-Ee3hUQzQ2MKiBFpQB/xu3zudZWI4EpJ2Z7CmCcu9XNlnBVANjeDSnNBfi+3+IOVGAF+ORbuT8hTYWgc/2UDuHg==
   dependencies:
     chokidar "^3.5.3"
 
