@@ -99,14 +99,11 @@ const MovieTrendCard = ({ movie }: MoviecardProps) => {
             _hover={{ opacity: 0.8 }}
           >
             {movie.isBookmarked ? (
-              <button
-                onClick={() => handleRemoveBookmark(movie.id)}
-                className=""
-              >
+              <button onClick={() => handleRemoveBookmark(movie.id)}>
                 <BookmarkIcon fill={"white"} />
               </button>
             ) : (
-              <button onClick={() => handleAddBookmark(movie.id)} className="">
+              <button onClick={() => handleAddBookmark(movie.id)}>
                 <BookmarkEmptyIcon />
               </button>
             )}

@@ -18,4 +18,4 @@ This application from Frontend Mentor Entertainment App Challenge was setup and 
 
 1. Type `yarn` to install dependencies.
 
-2. Run `yarn start`, the app should then appear in a browser tab on [localhost:3000](localhost:3000)
+2. Run `yarn start`, the app should then appear in a browser tab on [localhost:5173](localhost:5173)
