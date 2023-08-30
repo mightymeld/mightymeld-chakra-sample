@@ -4,6 +4,5 @@
   "prefab_dir": "src/prefabs",
   "web_server_url": "http://localhost:5173",
   "main_branch": "main",
-  "tailwind": true,
   "run_prettier": true
 }
