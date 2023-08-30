@@ -56,7 +56,7 @@ const MovieTrendCard = ({ movie }: MoviecardProps) => {
               {movie.rating}
             </Text>
           </Flex>
-          <Text aria-label="movie rating" padding={0}>
+          <Text aria-label="movie rating" color="gray.300" padding={0}>
             {movie.title}
           </Text>
         </Stack>

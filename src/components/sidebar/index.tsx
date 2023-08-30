@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Hide } from "@chakra-ui/react";
 import avatarImage from "../../assets/image-avatar.png";
 import homeIcon from "../../assets/icons/icon-nav-home.svg";
 import movieIcon from "../../assets/icons/icon-nav-movies.svg";
@@ -37,7 +37,6 @@ const Sidebar = () => {
       bg={"#161d2f"}
       p={3}
       borderRadius={"lg"}
-      height="100%"
       display={"flex"}
       flexDirection={{
         base: "row",
@@ -88,7 +87,9 @@ const Sidebar = () => {
           ))}
         </Box>
       </Box>
-      <Image src={avatarImage} alt="avatar" borderRadius={"full"} />
+      <Hide below="sm">
+        <Image src={avatarImage} alt="avatar" borderRadius={"full"} />
+      </Hide>
     </Box>
   );
 };
