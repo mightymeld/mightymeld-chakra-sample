@@ -1,14 +1,6 @@
 import { useContext } from "react";
 import { MovieDataType } from "../../assets/data";
-import {
-  Card,
-  CardBody,
-  Stack,
-  Text,
-  Image,
-  Box,
-  Flex,
-} from "@chakra-ui/react";
+import { Card, CardBody, Stack, Text, Image, Box, Flex } from "@chakra-ui/react";
 import { MovieContext } from "../../context/movies-context";
 import BookmarkIcon from "../icons/bookmark-icon";
 import BookmarkEmptyIcon from "../icons/bookmark-empy-icon";
@@ -44,11 +36,7 @@ const MovieCard = ({ movie }: MoviecardProps) => {
               {movie.year}
             </Text>
             <Box w="1" h="1" bg="gray.300" rounded="full" mx={1} />
-            <Image
-              src={movie.category === "Movies" ? moviesIcon : tvSeriesIcon}
-              alt=""
-              w="3"
-            />
+            <Image src={movie.category === "Movies" ? moviesIcon : tvSeriesIcon} alt="" w="3" />
             <Text fontSize={10} color="gray.300" aria-label="movie category">
               {movie.category}
             </Text>
@@ -61,14 +49,7 @@ const MovieCard = ({ movie }: MoviecardProps) => {
             {movie.title}
           </Text>
         </Stack>
-        <Flex
-          justifyContent="flex-end"
-          position="absolute"
-          top={0}
-          left={0}
-          right={0}
-          p={4}
-        >
+        <Flex justifyContent="flex-end" position="absolute" top={0} left={0} right={0} p={4}>
           <Box
             w="10"
             h="10"
@@ -80,7 +61,7 @@ const MovieCard = ({ movie }: MoviecardProps) => {
             _hover={{ opacity: 0.8 }}
           >
             {movie.isBookmarked ? (
-              <button onClick={() => handleRemoveBookmark(movie.id)} >
+              <button onClick={() => handleRemoveBookmark(movie.id)}>
                 <BookmarkIcon fill={"white"} />
               </button>
             ) : (

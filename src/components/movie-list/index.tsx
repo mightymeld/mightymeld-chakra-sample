@@ -9,10 +9,7 @@ interface MovieListProps {
 const MovieList = ({ recommendList }: MovieListProps) => {
   return (
     <>
-      <SimpleGrid
-        spacing={4}
-        templateColumns="repeat(auto-fill, minmax(250px, 1fr))"
-      >
+      <SimpleGrid spacing={4} templateColumns="repeat(auto-fill, minmax(250px, 1fr))">
         {recommendList.map((item) => (
           <MovieCard key={item.id} movie={item} />
         ))}

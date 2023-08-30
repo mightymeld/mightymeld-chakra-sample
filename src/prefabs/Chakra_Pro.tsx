@@ -61,14 +61,7 @@ export function _Flex() {
 }
 
 export function _Grid() {
-  return (
-    <Grid
-      h="200px"
-      templateRows="repeat(2, 1fr)"
-      templateColumns="repeat(5, 1fr)"
-      gap={4}
-    />
-  );
+  return <Grid h="200px" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={4} />;
 }
 
 export function _Heading() {
@@ -82,10 +75,7 @@ export function _HStack() {
 export function _Icon() {
   return (
     <Icon viewBox="0 0 200 200" color="red.500">
-      <path
-        fill="currentColor"
-        d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0"
-      />
+      <path fill="currentColor" d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
     </Icon>
   );
 }

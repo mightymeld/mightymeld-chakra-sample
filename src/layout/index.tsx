@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
       p={6}
       gap={6}
       overflowY={"hidden"}
-      style={{height: "100vh"}}
+      style={{ height: "100vh" }}
     >
       <Sidebar />
       <Box width={"full"} overflowY={"scroll"}>
