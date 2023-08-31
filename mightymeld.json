@@ -1,4 +1,5 @@
 {
+  "project_name": "mightymeld-chakra-sample",
   "run": "npm run dev",
   "include": ["src", ".prettierrc.json"],
   "prefab_dir": "src/prefabs",

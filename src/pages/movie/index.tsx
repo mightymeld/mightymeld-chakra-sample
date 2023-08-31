@@ -14,7 +14,7 @@ const Movies = () => {
 
   const handleSearch = (e: { target: { value: SetStateAction<string> } }) => {
     setSearch(e.target.value);
-    const newList = Movies.filter((movie) => movie.title.toLowerCase().includes(search));
+    const newList = Movies.filter((movie) => movie.title.toLowerCase().includes(search.toLowerCase()));
     setSearchList(newList);
   };
 
