@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { Box, Image, Hide } from "@chakra-ui/react";
-import avatarImage from "../../assets/image-avatar.png";
+import { Box, Image, Hide, Heading, Text } from "@chakra-ui/react";
+import avatarImage from "../../assets/image-avatar.jpg";
 import homeIcon from "../../assets/icons/icon-nav-home.svg";
 import movieIcon from "../../assets/icons/icon-nav-movies.svg";
 import tvSeriesIcon from "../../assets/icons/icon-nav-tv-series.svg";
@@ -8,22 +8,22 @@ import bookmrkIcon from "../../assets/icons/icon-nav-bookmark.svg";
 
 const navLinks = [
   {
-    name: "home",
+    name: "Home",
     icon: homeIcon,
     link: "/",
   },
   {
-    name: "movies",
+    name: "Movies",
     icon: movieIcon,
     link: "/movies",
   },
   {
-    name: "tv-series",
+    name: "TV Series",
     icon: tvSeriesIcon,
     link: "/tv-series",
   },
   {
-    name: "bookmarks",
+    name: "Bookmarks",
     icon: bookmrkIcon,
     link: "/bookmarks",
   },
@@ -35,12 +35,16 @@ const Sidebar = () => {
   return (
     <Box
       bg={"#161d2f"}
-      p={3}
+      p={5}
       borderRadius={"lg"}
       display={"flex"}
       flexDirection={{
         base: "row",
         lg: "column",
+      }}
+      width={{
+        base: "100%",
+        lg: 200,
       }}
       alignItems="center"
       justifyContent="space-between"
@@ -52,10 +56,11 @@ const Sidebar = () => {
           lg: "column",
         }}
         gap={10}
-        justifyContent="center"
-        alignItems="center"
       >
-        <Image src="/logo.svg" alt="logo" />
+        <Hide below="sm">
+          <Heading fontSize={16}>MovieApp</Heading>
+        </Hide>
+
         <Box
           py={{
             base: "0px",
@@ -66,14 +71,15 @@ const Sidebar = () => {
             base: "row",
             lg: "column",
           }}
-          gap={10}
+          gap={8}
         >
           {navLinks.map((item) => (
             <Link key={item.name} to={item.link}>
-              <Box width={5} height={5}>
+              <Box height={5} display={"flex"} gap={3} alignItems={"center"}>
                 <Image
                   src={item.icon}
                   alt={item.name}
+                  width={4}
                   style={{
                     filter: `${
                       pathname === item.link
@@ -82,13 +88,16 @@ const Sidebar = () => {
                     }`,
                   }}
                 />
+                <Hide below="lg">
+                  <Text fontWeight={500}> {item.name}</Text>
+                </Hide>
               </Box>
             </Link>
           ))}
         </Box>
       </Box>
       <Hide below="sm">
-        <Image src={avatarImage} alt="avatar" borderRadius={"full"} />
+        <Image src={avatarImage} alt="avatar" borderRadius={"full"} width={90} height={90} />
       </Hide>
     </Box>
   );

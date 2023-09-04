@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MovieDataType } from "../../assets/data";
-import { Card, CardBody, Stack, Text, Image, Box, Flex } from "@chakra-ui/react";
+import { Stack, Text, Image, Box, Flex } from "@chakra-ui/react";
 import { MovieContext } from "../../context/movies-context";
 import BookmarkIcon from "../icons/bookmark-icon";
 import BookmarkEmptyIcon from "../icons/bookmark-empy-icon";
@@ -14,33 +14,15 @@ interface MoviecardProps {
 const MovieTrendCard = ({ movie }: MoviecardProps) => {
   const { dispatch } = useContext(MovieContext);
 
-  const handleAddBookmark = (id: string) => {
-    dispatch({ type: "ADD BOOKMARK", id });
-  };
-
-  const handleRemoveBookmark = (id: string) => {
-    dispatch({ type: "REMOVE BOOKMARK", id });
+  const handleToggleBookmark = (id: string) => {
+    dispatch({ type: "TOOGLE BOOKMARK", id });
   };
 
   return (
-    <Card key={movie.id} padding={0} bg="transparent">
-      <CardBody padding={0} position="relative">
-        <Image
-          src={movie.thumbnail.regular.large}
-          alt="Green double couch with wooden legs"
-          borderRadius="lg"
-          style={{ width: "500px" }}
-        />
-        <Box
-          position="absolute"
-          top={0}
-          left={0}
-          right={0}
-          bottom={0}
-          bg="blackAlpha.900"
-          opacity={0.6}
-          borderRadius="lg"
-        />
+    <Box key={movie.id} padding={0} bg="transparent" width={300}>
+      <Box padding={0} position="relative" width={300}>
+        <Image src={movie.thumbnail.regular.large} alt="movie image" borderRadius="lg" width={300} />
+        <Box position="absolute" top={0} left={0} right={0} bottom={0} bg="blackAlpha.900" opacity={0.6} borderRadius="lg" />
         <Stack mt="6" spacing={0} position="absolute" bottom={0} left={0} right={0} p={4}>
           <Flex gap={1} alignItems="center" padding={0}>
             <Text fontSize={10} color="gray.300" aria-label="year of movie">
@@ -62,6 +44,7 @@ const MovieTrendCard = ({ movie }: MoviecardProps) => {
         </Stack>
         <Flex justifyContent="flex-end" position="absolute" top={0} left={0} right={0} p={4}>
           <Box
+            onClick={() => handleToggleBookmark(movie.id)}
             w="10"
             h="10"
             bg="black"
@@ -71,19 +54,11 @@ const MovieTrendCard = ({ movie }: MoviecardProps) => {
             justifyContent="center"
             _hover={{ opacity: 0.8 }}
           >
-            {movie.isBookmarked ? (
-              <button onClick={() => handleRemoveBookmark(movie.id)}>
-                <BookmarkIcon fill={"white"} />
-              </button>
-            ) : (
-              <button onClick={() => handleAddBookmark(movie.id)}>
-                <BookmarkEmptyIcon />
-              </button>
-            )}
+            {movie.isBookmarked ? <BookmarkIcon fill={"white"} /> : <BookmarkEmptyIcon />}
           </Box>
         </Flex>
-      </CardBody>
-    </Card>
+      </Box>
+    </Box>
   );
 };
 

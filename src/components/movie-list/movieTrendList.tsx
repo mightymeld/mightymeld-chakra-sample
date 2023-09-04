@@ -8,13 +8,11 @@ interface MovieTrendListProps {
 
 const MovieTrendList = ({ trendingList }: MovieTrendListProps) => {
   return (
-    <>
-      <Flex gap={4} overflowX={"scroll"}>
-        {trendingList.map((movie) => (
-          <MovieTrendCard key={movie.id} movie={movie} />
-        ))}
-      </Flex>
-    </>
+    <Flex gap={4} overflowX={"scroll"}>
+      {trendingList.map((movie) => (
+        <MovieTrendCard key={movie.id} movie={movie} />
+      ))}
+    </Flex>
   );
 };
 
