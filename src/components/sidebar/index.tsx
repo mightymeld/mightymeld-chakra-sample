@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Box, Image, Hide, Heading, Text } from "@chakra-ui/react";
+import { Box, Image, Heading, Text } from "@chakra-ui/react";
 import avatarImage from "../../assets/image-avatar.jpg";
 import homeIcon from "../../assets/icons/icon-nav-home.svg";
 import movieIcon from "../../assets/icons/icon-nav-movies.svg";
@@ -31,7 +31,6 @@ const navLinks = [
 
 const Sidebar = () => {
   const { pathname } = useLocation();
-
   return (
     <Box
       bg={"#161d2f"}
@@ -57,10 +56,9 @@ const Sidebar = () => {
         }}
         gap={10}
       >
-        <Hide below="sm">
+        <Box display={["none", "block", "block", "block"]} >
           <Heading fontSize={16}>MovieApp</Heading>
-        </Hide>
-
+        </Box>
         <Box
           py={{
             base: "0px",
@@ -81,24 +79,21 @@ const Sidebar = () => {
                   alt={item.name}
                   width={4}
                   style={{
-                    filter: `${
-                      pathname === item.link
-                        ? "invert(58%) sepia(14%) saturate(3166%) hue-rotate(215deg) brightness(91%) contrast(87%)"
-                        : "invert(84%)"
-                    }`,
+                    filter: `${pathname === item.link
+                      ? "invert(58%) sepia(14%) saturate(3166%) hue-rotate(215deg) brightness(91%) contrast(87%)"
+                      : "invert(84%)"
+                      }`,
                   }}
                 />
-                <Hide below="lg">
+                <Box display={["none", "none", "block", "block"]} >
                   <Text fontWeight={500}> {item.name}</Text>
-                </Hide>
+                </Box>
               </Box>
             </Link>
           ))}
         </Box>
       </Box>
-      <Hide below="sm">
-        <Image src={avatarImage} alt="avatar" borderRadius={"full"} width={90} height={90} />
-      </Hide>
+      <Image src={avatarImage} alt="avatar" borderRadius={"full"} width={{ base: 30, lg: 90 }} height={{ base: 30, lg: 90 }} />
     </Box>
   );
 };
