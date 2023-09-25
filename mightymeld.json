@@ -1,6 +1,6 @@
 {
   "project_name": "mightymeld-chakra-sample",
-  "run": "npm run dev",
+  "run": "yarn dev",
   "include": ["src", ".prettierrc.json"],
   "prefab_dir": "src/prefabs",
   "web_server_url": "http://localhost:5173",
