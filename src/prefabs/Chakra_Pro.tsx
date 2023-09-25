@@ -104,17 +104,15 @@ export function _Link() {
 
 export function _Modal() {
   return (
-    <Modal isOpen={true} onClose={() => { }}>
+    <Modal isOpen={false} onClose={() => {}}>
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>Modal Title</ModalHeader>
         <ModalCloseButton />
-        <ModalBody>
-          Modal Body
-        </ModalBody>
+        <ModalBody>Modal Body</ModalBody>
       </ModalContent>
     </Modal>
-  )
+  );
 }
 
 export function _NumberInput() {
