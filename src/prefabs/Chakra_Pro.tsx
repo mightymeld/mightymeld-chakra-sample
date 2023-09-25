@@ -30,6 +30,12 @@ import {
   NumberDecrementStepper,
   WrapItem,
   Switch,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
 } from "@chakra-ui/react";
 
 export function _AspectRatio() {
@@ -94,6 +100,21 @@ export function _Link() {
       Chakra Design system
     </Link>
   );
+}
+
+export function _Modal() {
+  return (
+    <Modal isOpen={true} onClose={() => { }}>
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader>Modal Title</ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
+          Modal Body
+        </ModalBody>
+      </ModalContent>
+    </Modal>
+  )
 }
 
 export function _NumberInput() {
