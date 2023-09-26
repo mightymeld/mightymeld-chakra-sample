@@ -2,10 +2,11 @@ import Layout from "../../layout";
 import { Box, HStack, Image, Heading, VStack, Text, Button } from "@chakra-ui/react";
 import { MovieContext } from "../../context/movies-context";
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const MovieDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { dispatch } = useContext(MovieContext);
   const { state } = useContext(MovieContext);
   const { Movies } = state;
@@ -19,7 +20,15 @@ const MovieDetail = () => {
   return (
     <Layout>
       <Box w="100%" display="flex" flexDirection="column" gap={8}>
-        <Heading fontSize={26}>Movie Detail</Heading>
+        <HStack spacing="24px" alignItems="center" justifyContent="space-between">
+          <Heading fontSize={26}>Movie Detail</Heading>
+           <Button onClick={() => navigate(-1)} bg="transparent" color="#fff" _hover={{
+	bg: "transparent"
+}}>
+            Go back
+          </Button>
+        </HStack>
+
         <HStack
           spacing={10}
           alignItems="flex-start"
