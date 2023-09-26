@@ -4,6 +4,7 @@ import Movies from "./pages/movie";
 import TvSeries from "./pages/tv-series";
 import Home from "./pages/home";
 import Error from "./pages/error";
+import MovieDetail from "./pages/movie-detail";
 
 export const router = createBrowserRouter([
   {
@@ -22,5 +23,9 @@ export const router = createBrowserRouter([
   {
     path: "/bookmarks",
     element: <Bookmarks />,
+  },
+  {
+    path: "/:pathname/:id",
+    element: <MovieDetail />,
   },
 ]);
