@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
     element: <Bookmarks />,
   },
   {
-    path: "/:pathname/:id",
+    path: "/:id",
     element: <MovieDetail />,
   },
 ]);

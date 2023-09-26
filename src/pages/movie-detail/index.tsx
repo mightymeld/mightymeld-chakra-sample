@@ -38,7 +38,7 @@ const MovieDetail = () => {
               lg: "50%",
             }}
           >
-            <Image src="https://picsum.photos/300/200" alt="Sample Image" width="100%" height="100%" objectFit="cover" />
+            <Image src={Movie[0].thumbnail.regular.large} alt={Movie[0].title} width="100%" height="100%" objectFit="cover" />
           </Box>
           <Box
             display="flex"
