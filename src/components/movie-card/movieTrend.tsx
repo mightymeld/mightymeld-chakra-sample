@@ -6,6 +6,7 @@ import BookmarkIcon from "../icons/bookmark-icon";
 import BookmarkEmptyIcon from "../icons/bookmark-empy-icon";
 import tvSeriesIcon from "../../assets/icons/icon-category-tv.svg";
 import moviesIcon from "../../assets/icons/icon-category-movie.svg";
+import { Link, useLocation } from "react-router-dom";
 
 interface MoviecardProps {
   movie: MovieDataType;
@@ -13,6 +14,8 @@ interface MoviecardProps {
 
 const MovieTrendCard = ({ movie }: MoviecardProps) => {
   const { dispatch } = useContext(MovieContext);
+  const { pathname } = useLocation();
+  const path = pathname === "/" ? "/home" : pathname;
 
   const handleToggleBookmark = (id: string) => {
     dispatch({ type: "TOOGLE BOOKMARK", id });
@@ -21,8 +24,20 @@ const MovieTrendCard = ({ movie }: MoviecardProps) => {
   return (
     <Box key={movie.id} padding={0} bg="transparent" width={300}>
       <Box padding={0} position="relative" width={300}>
-        <Image src={movie.thumbnail.regular.large} alt="movie image" borderRadius="lg" width={300} />
-        <Box position="absolute" top={0} left={0} right={0} bottom={0} bg="blackAlpha.900" opacity={0.6} borderRadius="lg" />
+        <Link to={`${path}/${movie.id}`}>
+          <Image src={movie.thumbnail.regular.large} alt="movie image" borderRadius="lg" width={300} cursor="pointer" />
+          <Box
+          position="absolute"
+          top={0}
+          left={0}
+          right={0}
+          bottom={0}
+          bg="blackAlpha.900"
+          opacity={0.6}
+          borderRadius="lg"
+          cursor="pointer"
+        />
+        </Link>
         <Stack mt="6" spacing={0} position="absolute" bottom={0} left={0} right={0} p={4}>
           <Flex gap={1} alignItems="center" padding={0}>
             <Text fontSize={10} color="gray.300" aria-label="year of movie">

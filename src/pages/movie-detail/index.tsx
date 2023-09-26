@@ -1,7 +1,21 @@
 import Layout from "../../layout";
 import { Box, HStack, Image, Heading, VStack, Text, Button } from "@chakra-ui/react";
+import { MovieContext } from "../../context/movies-context";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
 
 const MovieDetail = () => {
+  const { id } = useParams();
+  const { dispatch } = useContext(MovieContext);
+  const { state } = useContext(MovieContext);
+  const { Movies } = state;
+
+  const Movie = Movies.filter((item) => item.id === id);
+
+  const handleToggleBookmark = (id: string) => {
+    dispatch({ type: "TOOGLE BOOKMARK", id });
+  };
+
   return (
     <Layout>
       <Box w="100%" display="flex" flexDirection="column" gap={8}>
@@ -38,7 +52,7 @@ const MovieDetail = () => {
             gap={8}
           >
             <VStack spacing={10} alignItems="flex-start">
-              <Heading>The Great Land</Heading>
+              <Heading>{Movie[0].title} </Heading>
               <HStack spacing={12}>
                 <VStack alignItems="flex-start">
                   <Text fontWeight={600} fontSize="18px">
@@ -48,15 +62,15 @@ const MovieDetail = () => {
                 </VStack>
                 <VStack alignItems="flex-start">
                   <Text fontWeight={600} fontSize="18px">
-                    Language
+                    Category
                   </Text>
-                  <Text>English</Text>
+                  <Text>{Movie[0].category} </Text>
                 </VStack>
                 <VStack alignItems="flex-start">
                   <Text fontWeight={600} fontSize="18px">
-                    Language
+                    Rating
                   </Text>
-                  <Text>English</Text>
+                  <Text>{Movie[0].rating}</Text>
                 </VStack>
               </HStack>
               <VStack alignItems="flex-start">
@@ -69,8 +83,14 @@ const MovieDetail = () => {
                 </Text>
               </VStack>
             </VStack>
-            <Button variant="primary" width="100%" paddingY={6} background="#4334e3">
-              Add to bookmark
+            <Button
+              onClick={() => handleToggleBookmark(Movie[0].id)}
+              variant="primary"
+              width="100%"
+              paddingY={6}
+              background={` ${Movie[0].isBookmarked ? "#7e787e" : "#4334e3"}`}
+            >
+              {Movie[0].isBookmarked ? "Remove from bookmark" : "Add to bookmark"}
             </Button>
           </Box>
         </HStack>
