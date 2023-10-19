@@ -6,12 +6,11 @@ This application from Frontend Mentor Entertainment App Challenge was setup and 
 
 1. Run `npm install` to install depenendencies.
 
-2. Download a mightymeld.secrets file from the [MightyMeld Portal](https://mightymeld.app/instances) and place it in your project root 
+2. Download your mightymeld.secrets file from the [MightyMeld Portal](https://mightymeld.app/instances) and place it in your project root 
 
 3. Run `npx mightymeld` to launch MightyMeld studio in a browser tab.
 
 ## Running the app without MightyMeld
-
 
 1. Type `npm install` to install dependencies.
 
